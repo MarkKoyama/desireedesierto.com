@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="22 22 258 230" role="img" aria-labelledby="venn-title">
+  <title id="venn-title">Abstract Venn diagram of political economy (circle), economic history (rectangle), and applied theory (triangle)</title>
+    <rect x="122.0" y="58.0" width="148" height="104" transform="rotate(-12 196 110)" fill="#2c3f72" fill-opacity=".15" stroke="#2c3f72" stroke-width="1.8" stroke-linejoin="round"/>
+    <polygon points="80,246 262,224 136,108" fill="#2f7684" fill-opacity=".20" stroke="#2f7684" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="104" cy="104" r="76" fill="#66539a" fill-opacity=".22" stroke="#66539a" stroke-width="1.8"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#2c3f72" text-anchor="middle">
+    <text x="78" y="69">Political</text>
+    <text x="78" y="84">Economy</text>
+    <text x="232" y="89">Economic</text>
+    <text x="232" y="104">History</text>
+    <text x="178" y="209">Applied</text>
+    <text x="178" y="224">Theory</text>
+  </g>
+</svg>

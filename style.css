@@ -1,0 +1,165 @@
+/* Desiree A. Desierto — site styles.
+   Cream-and-lavender variant with navy text of style.css; layout identical, only the palette differs. */
+
+:root {
+  --bg: #f5efe0;        /* cream, same as the main site */
+  --surface: #e4dcf0;   /* lavender: header and footer bands */
+  --text: #2c3f72;      /* navy text, one shade lighter */
+  --muted: #56658c;
+  --rule: #ddd3e3;
+  --accent: #66539a;    /* deeper lavender for links and headings, readable on cream */
+  --accent-ink: #4f3f7c;
+  --max: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--accent-ink); }
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+.site-header .inner {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 2rem;
+}
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .95rem;
+  padding: .15rem 0;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover { color: var(--accent); }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--accent); }
+
+.site-mark { width: 30px; height: 28px; display: block; }
+
+/* Main */
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+}
+h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--accent);
+  margin: 3rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 .25rem;
+}
+
+/* Home */
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17rem;
+  gap: 2.5rem;
+  align-items: start;
+}
+.venn { margin: -.5rem 0 0; }
+.venn img { width: 100%; height: auto; display: block; }
+/* On wide screens the flower hangs to the right of the text column, keeping the left edge aligned. */
+@media (min-width: 78rem) {
+  .intro { margin-right: -14rem; grid-template-columns: minmax(0, 1fr) 19rem; }
+}
+@media (max-width: 44rem) {
+  .intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  .venn { order: -1; width: 100%; max-width: 20rem; margin: 0 auto; }
+}
+.intro h1 { margin-bottom: .25rem; }
+.position { color: var(--muted); margin: 0 0 1.25rem; font-weight: 500; }
+.quick-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
+
+/* Buttons and paper links */
+
+.button, .links a {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: .2rem .6rem;
+  color: var(--accent);
+  background: transparent;
+}
+.button:hover, .links a:hover { background: var(--accent); color: #fff; }
+.button.primary { background: var(--accent); color: #fff; }
+.button.primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+
+/* Paper lists */
+
+.papers { list-style: none; padding: 0; margin: 0; }
+.papers li { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+.papers li:last-child { border-bottom: 0; }
+.papers .title { font-weight: 700; }
+.papers .meta { display: block; color: var(--muted); font-size: .95rem; }
+.papers .meta em { color: var(--text); }
+.links { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .45rem; }
+
+/* Footer */
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .85rem;
+}
+.site-footer .inner {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
